@@ -4,10 +4,11 @@ import * as path from "path";
 import { clearRecordsFolder } from "../utils/fileUtils";
 
 interface RecordOptions {
-  email: string;
+  email?: string;
   dryRun?: boolean;
   target?: string;
   clear?: boolean;
+  fetch?: boolean;
 }
 
 export async function recordActivity(options: RecordOptions): Promise<void> {
@@ -16,6 +17,7 @@ export async function recordActivity(options: RecordOptions): Promise<void> {
     dryRun = false,
     clear = false,
     target = "./records-folder",
+    fetch = false,
   } = options;
   // Always resolve records-folder relative to the project root
   const projectRoot = path.resolve(__dirname, "../../");
@@ -63,12 +65,14 @@ export async function recordActivity(options: RecordOptions): Promise<void> {
       );
     }
     // 2. Fetch latest changes
-    console.log();
-    console.log("> Fetching latest changes from origin...");
-    try {
-      execSync("git fetch origin", { stdio: "inherit" });
-    } catch (e) {
-      console.warn("Could not fetch from origin. Continuing anyway.");
+    if (fetch) {
+      console.log();
+      console.log("> Fetching latest changes from origin...");
+      try {
+        execSync("git fetch origin", { stdio: "inherit" });
+      } catch (e) {
+        console.warn("Could not fetch from origin. Continuing anyway.");
+      }
     }
     // 3. Extract commit dates
     const branch = "origin/main";

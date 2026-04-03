@@ -20,6 +20,7 @@ program
   .description("Record Git activity based on filters")
   .option("--email <email>", "Git email to filter activity")
   .option("--dry-run", "Show commits without creating them")
+  .option("--fetch", "Fetch latest changes from origin before recording")
   .option("--clear", "Clear existing records (reset only, no new recording)")
   .addHelpText(
     "after",
@@ -28,6 +29,7 @@ Examples:
   $ gitveil record                    # Record activity using configured email
   $ gitveil record --email user@example.com  # Record activity for specific email
   $ gitveil record --dry-run          # Preview without saving
+  $ gitveil record --fetch            # Fetch latest changes from origin before recording
   $ gitveil record --clear            # Clear/reset existing records only`
   )
   .action((options) => recordActivity(options));
