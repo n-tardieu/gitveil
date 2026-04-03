@@ -11,7 +11,7 @@
 
 ![Before](https://github.com/tardieunicolas/gitveil/blob/main/assets/how-it-work.gif)
 
-## 🆕 What's New in v1.0.4
+## 🆕 What's New in v1.0.6
 
 > **[View Full Changelog](CHANGELOG.md)** 
 
@@ -86,13 +86,13 @@ Check our comprehensive troubleshooting guide:
 
 **[→ View Troubleshooting Guide](TROUBLESHOOTING.md)**
 
----
+<!-- ---
 
 ## Support This Project
 
 If you rely on this tool and find it useful, please consider supporting it. Maintaining an open source project takes time, and a cup of coffee would be greatly appreciated!
 
-<a href="https://coff.ee/nicolastardieu" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://coff.ee/nicolastardieu" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> -->
 
 ---
 
